@@ -173,7 +173,7 @@ $(document).ready(function () {
     $(".autoplay-stop").on("click", function () {
         if (isAutoplaying) {
             mainVisualSwiper.autoplay.stop();
-            $(this).html('<img src="img/ico/i-stop.svg" alt="자동재생 멈춤">'); // 버튼 텍스트 변경 (▶: 재생)
+            $(this).html('<img src="img/ico/i-play.svg" alt="자동재생 멈춤">'); // 버튼 텍스트 변경 (▶: 재생)
         } else {
             mainVisualSwiper.autoplay.start();
             $(this).html('<img src="img/ico/i-stop.svg" alt="자동재생 멈춤">');; // 버튼 텍스트 변경 (■: 정지)
