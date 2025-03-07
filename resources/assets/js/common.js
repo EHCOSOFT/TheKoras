@@ -38,7 +38,7 @@ $(document).ready(function () {
         }
     }
 
-    if (windowWidth <= 992) {
+    if (windowWidth <= 768) {
         // 📱 **모바일 이벤트 (클릭)**
 
         // 공통 상단
@@ -98,7 +98,33 @@ $(document).ready(function () {
             menu.animate({ scrollLeft: "-=" + scrollAmount }, 300, checkScroll);
         });
 
-    } else {
+    }
+    else if (windowWidth <= 992) {
+        // 태블릿 클릭 **
+        // PC에서는 클릭하면 메뉴 고정
+        $(".depth-01 > li > a").on("click", function (e) {
+            e.preventDefault();
+            var parentLi = $(this).parent("li");
+            var subMenu = parentLi.find(".depth-02");
+            toggleMenu(parentLi, subMenu);
+
+            var parentOffset = parentLi.position().left;
+            // 스크롤 위치에 따라 왼쪽 또는 오른쪽 정렬 결정
+            if (parentOffset >= 150) {
+                subMenu.css({
+                    left: "50%",
+                    right: "auto",
+                    transform: "translateX(-50%)",
+                });
+            } else {
+                subMenu.css({
+                    left: "0",
+                    right: "auto"
+                });
+            }
+        });
+    }
+    else {
         // 💻 **PC 이벤트 (클릭 + 호버)**
         $(".depth-01 > li").on("mouseenter", function () {
             var parentLi = $(this);
@@ -154,7 +180,7 @@ $(document).ready(function () {
     var mainVisualSwiper = new Swiper(".main-visual-swiper", {
         loop: true,
         autoplay: {
-            delay: 3000,
+            delay: 5000,
             disableOnInteraction: false
         },
         on: {
@@ -184,7 +210,7 @@ $(document).ready(function () {
     var mainSec10Swiper = new Swiper(".main-sec-10-swiper", {
         // 모바일 (768px 이하)
         slidesPerView: 1.2,
-        spaceBetween: 12, // 슬라이드 간 여백 축소
+        spaceBetween: 16, // 슬라이드 간 여백 축소
         slidesOffsetBefore: 0, // 시작 전 여백 축소
         slidesOffsetAfter: 0,
         loop: true, // 무한 롤링 효과 추가
@@ -198,32 +224,32 @@ $(document).ready(function () {
         breakpoints: {
             500: {
                 slidesPerView: 1.5,
-                spaceBetween: 12, // 슬라이드 간 여백 축소
+                spaceBetween: 16, // 슬라이드 간 여백 축소
                 slidesOffsetBefore: 0, // 시작 전 여백 축소
                 slidesOffsetAfter: 0  // 끝 부분 여백 축소
             },
             768: {
                 slidesPerView: 2.5,
-                spaceBetween: 12, // 슬라이드 간 여백 축소
+                spaceBetween: 16, // 슬라이드 간 여백 축소
                 slidesOffsetBefore: 0, // 시작 전 여백 축소
                 slidesOffsetAfter: 0  // 끝 부분 여백 축소
             },// 태블릿 (768px ~ 1024px)
             992: {
-                slidesPerView: 3,
-                spaceBetween: 12, // 슬라이드 간 여백
+                slidesPerView: 4,
+                spaceBetween: 16, // 슬라이드 간 여백
                 slidesOffsetBefore: 0, // 시작 전 여백
                 slidesOffsetAfter: 0  // 끝 부분 여백
             },
             // 데스크탑 (1024px 이상)
             1400: {
-                slidesPerView: 3,
-                spaceBetween: 12, // 기본 여백
+                slidesPerView: 5,
+                spaceBetween: 16, // 기본 여백
                 slidesOffsetBefore: 0, // 기본 시작 여백
                 slidesOffsetAfter: 0  // 기본 끝 여백
             },
             1600: {
-                slidesPerView: 5,
-                spaceBetween: 12,
+                slidesPerView: 6,
+                spaceBetween: 16,
                 slidesOffsetBefore: 0, // 기본 시작 여백
                 slidesOffsetAfter: 0  // 기본 끝 여백
             }
@@ -243,7 +269,7 @@ $(document).ready(function () {
     var mainSec17Swiper = new Swiper(".main-sec-17-swiper", {
         // 모바일 (768px 이하)
         slidesPerView: 1.2,
-        spaceBetween: 12, // 슬라이드 간 여백 축소
+        spaceBetween: 16, // 슬라이드 간 여백 축소
         slidesOffsetBefore: 0, // 시작 전 여백 축소
         slidesOffsetAfter: 0,
         loop: true, // 무한 롤링 효과 추가
@@ -256,33 +282,33 @@ $(document).ready(function () {
         allowTouchMove: false, // 사용자가 직접 드래그하지 못하도록 설정
         breakpoints: {
             500: {
-                slidesPerView: 1.5,
-                spaceBetween: 12, // 슬라이드 간 여백 축소
+                slidesPerView: 1.8,
+                spaceBetween: 16, // 슬라이드 간 여백 축소
                 slidesOffsetBefore: 0, // 시작 전 여백 축소
                 slidesOffsetAfter: 0  // 끝 부분 여백 축소
             },
             768: {
                 slidesPerView: 2.5,
-                spaceBetween: 12, // 슬라이드 간 여백 축소
+                spaceBetween: 16, // 슬라이드 간 여백 축소
                 slidesOffsetBefore: 0, // 시작 전 여백 축소
                 slidesOffsetAfter: 0  // 끝 부분 여백 축소
             },// 태블릿 (768px ~ 1024px)
             992: {
                 slidesPerView: 4,
-                spaceBetween: 12, // 슬라이드 간 여백
+                spaceBetween: 16, // 슬라이드 간 여백
                 slidesOffsetBefore: 0, // 시작 전 여백
                 slidesOffsetAfter: 0  // 끝 부분 여백
             },
             // 데스크탑 (1024px 이상)
             1400: {
                 slidesPerView: 5,
-                spaceBetween: 12, // 기본 여백
+                spaceBetween: 16, // 기본 여백
                 slidesOffsetBefore: 0, // 기본 시작 여백
                 slidesOffsetAfter: 0  // 기본 끝 여백
             },
             1600: {
                 slidesPerView: 6,
-                spaceBetween: 12,
+                spaceBetween: 16,
                 slidesOffsetBefore: 0, // 기본 시작 여백
                 slidesOffsetAfter: 0  // 기본 끝 여백
             }

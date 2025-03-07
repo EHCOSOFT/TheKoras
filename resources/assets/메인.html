@@ -15,9 +15,23 @@
         <header class="header">
             <div class="container">
                 <a href="#" class="header-logo"></a>
-                <div class="header-search">
-                    <img src="img/ico/i-header-search.svg" alt="검색">
-                    <input type="text" placeholder="해다운에서 검색해보세요.">
+                <div class="header-search-wrap">
+                    <div class="header-search">
+                        <img src="img/ico/i-header-search.svg" alt="검색">
+                        <input type="text" placeholder="해다운에서 검색해보세요.">
+                    </div>
+                    <div class="header-search-list" style="display: flex;">
+                        <div class="header-search-list-top">
+                            <p>최근 검색어</p>
+                            <div class="save">자동저장 <span class="on">ON</span></div>
+                            <a href="#">전체삭제</a>
+                        </div>
+                        <ul>
+                            <li><a href="#">축산인증</a><button type="button" class="remove"><img src="img/ico/i-remove.svg" alt="삭제"></button></li>
+                            <li><a href="#">축산인증</a><button type="button" class="remove"><img src="img/ico/i-remove.svg" alt="삭제"></button></li>
+                            <li><a href="#">축산인증</a><button type="button" class="remove"><img src="img/ico/i-remove.svg" alt="삭제"></button></li>
+                        </ul>
+                    </div>
                 </div>
                 <nav class="header-navbar">
                     <div class="header-navbar-wrap">
@@ -36,35 +50,22 @@
                                     <li><a href="#">협력 네트워크</a></li>
                                 </ul>
                             </li>
+                            <!-- 비회원/의뢰인/전문가일 경우엔 "견적 비교 요청"-->
                             <li>
-                                <a href="#">견적비교 요청</a>
+                                <a href="#">견적 비교 요청</a>
+                            </li>
+                            <!-- 관리자일 경우엔 "견적 비교 상담"-->
+                            <li style="display: none;">
+                                <a href="#">견적 비교 상담</a>
                             </li>
                             <li>
                                 <a href="#">해썹 시공</a>
-                                <ul class="depth-02">
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">문의사항</a></li>
-                                    <li><a href="#">해다운 후기</a></li>
-                                    <li><a href="#">이벤트 현황</a></li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#">금속검출기 공동구매</a>
-                                <ul class="depth-02">
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">문의사항</a></li>
-                                    <li><a href="#">해다운 후기</a></li>
-                                    <li><a href="#">이벤트 현황</a></li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#">상담 문의</a>
-                                <ul class="depth-02">
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">문의사항</a></li>
-                                    <li><a href="#">해다운 후기</a></li>
-                                    <li><a href="#">이벤트 현황</a></li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="#">고객센터</a>
@@ -73,6 +74,15 @@
                                     <li><a href="#">문의사항</a></li>
                                     <li><a href="#">해다운 후기</a></li>
                                     <li><a href="#">이벤트 현황</a></li>
+                                </ul>
+                            </li>
+                            <!-- 관리자일 경우에 노출-->
+                            <li style="display: none;">
+                                <a href="#">해다운 매니저</a>
+                                <ul class="depth-02">
+                                    <li><a href="#">해다운 방문상담 현황</a></li>
+                                    <li><a href="#">전문가 방문상담 현황</a></li>
+                                    <li><a href="#">다이렉트 상담 현황</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -124,8 +134,8 @@
                         </a>
                     </div>
                     <div class="header-menu">
-                        <p>메뉴</p>
                         <button type="button" class="header-menu">
+                            <p>메뉴</p>
                             <img src="img/ico/i-header-menu.svg" alt="상단 메뉴">
                         </button>
                     </div>
@@ -210,7 +220,9 @@
                             <li>
                                 <dl>
                                     <dt>
-                                        <img src="img/main/cont-02-01.svg" alt="1분 온라인 상담 신청서 작성">
+                                        <a href="#">
+                                            <img src="img/main/cont-02-01.svg" alt="1분 온라인 상담 신청서 작성">
+                                        </a>
                                     </dt>
                                     <dd class="title">1분 온라인 상담 신청서 작성</dd>
                                     <dd>지금 통화가 어려우신가요? 1분 상담 신청서 작성으로 OK!<br>
@@ -220,7 +232,9 @@
                             <li>
                                 <dl>
                                     <dt>
-                                        <img src="img/main/cont-02-02.svg" alt="전화 1588-0478">
+                                        <a href="#">
+                                            <img src="img/main/cont-02-02.svg" alt="전화 1588-0478">
+                                        </a>
                                     </dt>
                                     <dd class="title">전화 1588-0478</dd>
                                     <dd>온라인 접수가 힘드신가요? 통화 한 번에 OK!<br>
@@ -230,7 +244,9 @@
                             <li>
                                 <dl>
                                     <dt>
-                                        <img src="img/main/cont-02-03.svg" alt="카톡 1:1 채팅상담 신청">
+                                        <a href="#">
+                                            <img src="img/main/cont-02-03.svg" alt="카톡 1:1 채팅상담 신청">
+                                        </a>
                                     </dt>
                                     <dd class="title">카톡 1:1 채팅상담 신청</dd>
                                     <dd>신청서 작성 NO, 전화도 번거롭다면 채팅상담도 OK!<br>
@@ -255,7 +271,8 @@
                         </h5>
                     </div>
                     <div class="img-group point">
-                        <img src="img/main/cont-03-02.svg" alt="숨겨진 비용에 대한 진실 이미지">
+                        <img src="img/main/cont-03-02.svg" alt="숨겨진 비용에 대한 진실 이미지" class="mo-img">
+                        <img src="img/main/pc-cont-03-02.svg" alt="숨겨진 비용에 대한 진실 이미지" class="pc-img">
                     </div>
                     <div class="sec-cont-two">
                         <h5>업체 소개를 통해 해썹 인증 한 건으로도 최소<br>
@@ -304,14 +321,14 @@
                     </div>
                     <div class="sec-cont-six">
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <h6>전문가와 시공사를 서로 소개받으셨나요?<br>
                                     시공도 하고 컨설팅도 하는 업체라서 괜찮을까요?</h6>
                                 <p>하지만, 보이지 않는 과도한 리베이트가 포함될 수도 있습니다.</p>
                                 <h2>해썹 컨설팅, 금속검출기, 시공은<br>
                                     분리하셔야 합니다.</h2>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <ul>
                                     <li>온라인 견적비교로 <b>모든 과정이 한 번에!</b></li>
                                     <li>컨설팅과 시공을 한 업체에서 진행하는 것 같은 <b>편리함</b></li>
@@ -320,8 +337,10 @@
                             </div>
                             <div class="col-12">
                                 <div class="img-group">
-                                    <img src="img/main/cont-04-03.svg" alt="견적받기" class="mo-img">
-                                    <img src="img/main/pc-cont-04-03.svg" alt="견적받기" class="pc-img">
+                                    <a href="#">
+                                        <img src="img/main/cont-04-03.svg" alt="견적받기" class="mo-img">
+                                        <img src="img/main/pc-cont-04-03.svg" alt="견적받기" class="pc-img">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -332,16 +351,18 @@
                 <div class="container">
                     <div class="sec-cont-one">
                         <div class="row">
-                            <div class="col-12 col-lg-6">
+                            <div class="col-12 col-md-6 col-lg">
                                 <h6>정해진 가격이 없는 컨설팅 금액!</h6>
                                 <h4>해다운에서는<br>
                                     투명하게 비교하고</h4>
                                 <h5>더 좋은 서비스를 합리적인 가격으로!</h5>
                             </div>
-                            <div class="col-12 col-lg-6">
+                            <div class="col-12 col-md-6 col-lg-7">
                                 <div class="img-group">
-                                    <img src="img/main/cont-05-01.svg" alt="내 사업장의 예상 견적서" class="mo-img">
-                                    <img src="img/main/pc-cont-05-01.svg" alt="내 사업장의 예상 견적서" class="pc-img">
+                                    <a href="#">
+                                        <img src="img/main/cont-05-01.svg" alt="내 사업장의 예상 견적서" class="mo-img">
+                                        <img src="img/main/pc-cont-05-01.svg" alt="내 사업장의 예상 견적서" class="pc-img">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -370,13 +391,27 @@
                 <div class="container">
                     <div class="sec-cont-one">
                         <h6>금속검출기 가격 도대체 얼마가 적절할까요?</h6>
-                        <h2>금속검출기도 간단히 비교 견적<br>받고
+                        <h2>금속검출기도 간단히 비교 견적 받고<br>
                             더 저렴하게 구매하세요</h2>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-lg-6 mo-none">
-                            <div class="img-group  max-width">
-                                <img src="img/main/cont-07-04.svg" alt="금속검출기 텍스트">
+                    <div class="row reverse">
+                        <div class="col-12 col-lg-6">
+                            <div class="sec-cont-text">
+                                <dl>
+                                    <dt><b>Q</b>금속검출기란?</dt>
+                                    <dd>제품(식품)에 금속 이물질이 들어갔는지<br>
+                                        검출 및 리젝트 하는 해썹 인증 필수 장치입니다.</dd>
+                                </dl>
+                                <dl>
+                                    <dt><b>Q</b>어디서 사용되나요?</dt>
+                                    <dd><b>금속검출기</b>해썹 인증을 받는 축산물과 식품 제조·가공 업체<br>
+                                        <b>알루스캔</b>제품 포장 시 알루미늄을 사용하는 제조·가공 업체<br>
+                                        <b>콤비검출기</b>금속 검출과 중량 선별을 동시에 검사하려는 제조·가공 업체<br>
+                                        <b>+</b>그 외 금속 검출이 필요한 각종 제조·가공 업체!
+                                    </dd>
+                                </dl>
+                                <p><img src="img/ico/i-asterisk.svg" alt="asterisk">제조 식품별 필수 도입 여부 확인은 고객센터로 문의해 주세요!
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
@@ -387,13 +422,13 @@
                     </div>
                     <hr>
                     <div class="row">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="img-group">
                                 <img src="img/main/cont-07-01.svg" alt="상시판매" class="mo-img">
                                 <img src="img/main/pc-cont-07-01.svg" alt="상시판매" class="pc-img">
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-md-6">
                             <div class="img-group">
                                 <img src="img/main/cont-07-02.svg" alt="상시판매" class="mo-img">
                                 <img src="img/main/pc-cont-07-02.svg" alt="상시판매" class="pc-img">
@@ -402,7 +437,7 @@
                     </div>
                     <div class="sec-cont-two">
                         <h6>해다운 금속검출기 공동구매는<br>
-                            <b>제조사별 견적을 비교 검토하여<br class="mo"><span>최저가로 진행</span>됩니다.</b>
+                            <b>제조사별 견적을 비교 검토하여 <br class="mo"><span>최저가로 진행</span>됩니다.</b>
                         </h6>
                         <p>가격은 생산 품목, 세부 규격, 기술 사양이<br>
                             확인되어야 산출 가능합니다.</p>
@@ -431,9 +466,16 @@
                             <a href="#">간편한 전화 무료 상담 받기<img src="img/ico/i-circle-right.svg" alt="바로가기"></a>
                         </div>
                         <p>해다운은 견적 비교 후 시공은 필수가 아닌<br> 100% 고객님의 선택입니다.</p>
-                        <div class="img-group">
-                            <img src="img/main/cont-08-01.svg" alt="이벤트" class="mo-img">
-                            <img src="img/main/pc-cont-08-01.svg" alt="이벤트" class="pc-img">
+                        <div class="sec-cont-event">
+                            <div class="event">
+                                <p>EVENT!</p>
+                            </div>
+                            <div class="event-box">
+                                <h4>무료 전문가 전화 상담 제공</h4>
+                                <h6>해썹 관련 고민은 전문가에게 물어보세요!<br>
+                                    견적 비교 신청 시 해다운이 해썹 인증 전문가의<br class="mo">
+                                    전화 상담을 지원해 드립니다!</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -444,9 +486,33 @@
                         <h6>해썹 인증 과정 해다운에서는 사후관리까지 걱정 없이</h6>
                         <h4>해다운이 다 드리는 <b>다드림 서비스</b></h4>
                     </div>
-                    <div class="img-group">
-                        <img src="img/main/cont-09-01.svg" alt="이벤트" class="mo-img">
-                        <img src="img/main/pc-cont-09-01.svg" alt="이벤트" class="pc-img">
+                    <div class="sec-cont-event">
+                        <ul>
+                            <li>
+                                <h5>200만원 상당의<br>
+                                    법률검토 계약서 양식 2종 제공</h5>
+                                <p>- HACCP 인증 컨설팅 계약서<br>- HACCP 인증 시공 계약서</p>
+                                <img src="img/main/cont-09-05.svg" alt="계약서 아이콘">
+                            </li>
+                            <li>
+                                <h5>법률 상담료 1회<span>(약 20만원 상당)</span><br>
+                                    변호사 수임료 최대 50% 지원<br><span>(약 300만원 상당)</span></h5>
+                                <img src="img/main/cont-09-06.svg" alt="할인 아이콘">
+                            </li>
+                            <li>
+                                <h5>세무 기장료 지원<span>(최대 60만원)</span><br>
+                                    노무사 상담료 지원<span>(약 20만원 상당)</span><br>
+                                    변리사 수임료 할인 지원<span>(20% 상당)</span></h5>
+                                <img src="img/main/cont-09-07.svg" alt="지원 아이콘">
+                            </li>
+                            <li>
+                                <h5>정부 지원정책 정보<br>
+                                    정기 구독형 서비스 제공<br><span>(정책자금/운용자금/기타)</span></h5>
+                                <img src="img/main/cont-09-08.svg" alt="정보 아이콘">
+                            </li>
+                        </ul>
+                        <p>* 본 서비스는 해다운 지정 업체 이용시 제공되는 서비스입니다.</p>
+                        <h1>무료 제공</h1>
                     </div>
                 </div>
                 <div class="sec-cont-two">
@@ -1057,7 +1123,7 @@
                                         <div class="cont-box">
                                             <p>시설이 갖춰진 공장이라고 하길래
                                                 해썹 받을 때 큰돈이 안 들어 갈 것
-                                                같아서 임대계약을 하려고 했습니다.
+                                                같아서 임대계약을 하려고 했습니다.<br>
                                                 그다음에 바로 해썹 인증 컨설팅을
                                                 하려고 했었어요.</p>
                                         </div>
@@ -1065,25 +1131,25 @@
                                             <p>그런데 해다운 사전 점검 서비스를
                                                 받아봤더니 배수구부터 전기 승압,
                                                 천장 같은 많은 부분이 저희
-                                                생산제품 유형과 맞지 않았습니다.
+                                                생산제품 유형과 맞지 않았습니다.<br>
                                                 또 기존 공장 구조가 조금 불편해서 이 부분은 감수하려고 했는데 불법
-                                                건축물이더라고요.
+                                                건축물이더라고요.<br>
                                                 해썹 인증시설 공장이라고 했는데,
                                                 종합적으로 많은 시설공사가
                                                 필요하겠더라구요.</p>
                                             <img src="img/main/cont-14-01.png" alt="해다운 사전점검 이미지">
                                         </div>
                                         <div class="cont-box">
-                                            <p>해다운 사전 점검 서비스 덕분에 큰 도움을 받았습니다.
+                                            <p>해다운 사전 점검 서비스 덕분에 큰 도움을 받았습니다.<Br>
                                                 점검 때 알려주신 내용으로 저희
                                                 생산제품 유형하고 적합한 공장을
-                                                다시 찾았어요.
+                                                다시 찾았어요.<br>
                                                 덕분에 크게 들어갈 수도 있던
                                                 공사비용을 아낄 수 있었네요.</p>
                                             <img src="img/main/cont-14-02.png" alt="해다운 사전점검 이미지">
                                         </div>
                                         <div class="cont-box">
-                                            <p>사전점검 서비스가 없었다면 모르고 계약해서 큰돈을 지출할 뻔했어요.
+                                            <p>사전점검 서비스가 없었다면 모르고 계약해서 큰돈을 지출할 뻔했어요.<br>
                                                 감사합니다.</p>
                                         </div>
                                     </div>
@@ -1137,7 +1203,9 @@
                                 <li>
                                     <dl>
                                         <dt>
-                                            <img src="img/main/cont-02-01.svg" alt="1분 온라인 상담 신청서 작성">
+                                            <a href="#">
+                                                <img src="img/main/cont-02-01.svg" alt="1분 온라인 상담 신청서 작성">
+                                            </a>
                                         </dt>
                                         <dd class="title">1분 온라인 상담 신청서 작성</dd>
                                         <dd>지금 통화가 어려우신가요? 1분 상담 신청서 작성으로 OK!<br>
@@ -1147,7 +1215,9 @@
                                 <li>
                                     <dl>
                                         <dt>
-                                            <img src="img/main/cont-02-02.svg" alt="전화 1588-0478">
+                                            <a href="#">
+                                                <img src="img/main/cont-02-02.svg" alt="전화 1588-0478">
+                                            </a>
                                         </dt>
                                         <dd class="title">전화 1588-0478</dd>
                                         <dd>온라인 접수가 힘드신가요? 통화 한 번에 OK!<br>
@@ -1157,7 +1227,9 @@
                                 <li>
                                     <dl>
                                         <dt>
-                                            <img src="img/main/cont-02-03.svg" alt="카톡 1:1 채팅상담 신청">
+                                            <a href="#">
+                                                <img src="img/main/cont-02-03.svg" alt="카톡 1:1 채팅상담 신청">
+                                            </a>
                                         </dt>
                                         <dd class="title">카톡 1:1 채팅상담 신청</dd>
                                         <dd>신청서 작성 NO, 전화도 번거롭다면 채팅상담도 OK!<br>
